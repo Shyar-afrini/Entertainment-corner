@@ -11,7 +11,6 @@ const Featured = () => {
   const [data, setData] = useState([]);
   const [backdrop, setBackdrop] = useState('');
   const [title, setTitle] = useState('');
-  const [random, setRandom] = useState(Math.floor(Math.random() * 20))
 
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
@@ -29,18 +28,20 @@ const Featured = () => {
       }
     };
     handleRequest();
-  }, []);
+  }, [apiKey]);
+
+  let randomNumber = Math.floor(Math.random() * 20);
 
   useEffect(() => {
     if (data.length > 0) {
-      const backdrop_path = `https://image.tmdb.org/t/p/original/${data[random]?.backdrop_path}`;
+      const backdrop_path = `https://image.tmdb.org/t/p/original/${data[randomNumber]?.backdrop_path}`;
       setBackdrop(backdrop_path);
-      setTitle(data[random]?.title);
+      setTitle(data[randomNumber]?.title);
     }
-  }, []);
+  }, [data, randomNumber]);
 
-  const vote_average = data[random]?.vote_average;
-  const id = data[random]?.id;
+  const vote_average = data[randomNumber]?.vote_average;
+  const id = data[randomNumber]?.id;
 
 
   return (
