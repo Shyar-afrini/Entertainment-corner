@@ -50,12 +50,12 @@ const Details = ({ movie_id }) => {
         className='w-full h-screen object-cover selection:bg-none'
       />
 
-      <div className='absolute w-full bottom-10 xs:bottom-20 flex flex-col md:flex-row justify-center items-center md:items-start gap-4 px-0 xs:px-4 md:px-20 lg:px-24 xl:px-32 2xl:px-40 z-10'>
+      <div className='absolute w-full bottom-10 xs:bottom-20 flex flex-col md:flex-row justify-center items-center gap-4 px-0 xs:px-4 md:px-20 lg:px-24 xl:px-32 2xl:px-40 z-10'>
         <div className='hidden lg:flex flex-shrink-0 justify-center px-4 md:w-auto h-auto w-[70%]'>
           <Card
             image={posterUrl}
             display={'hidden'}
-            styles={'active:scale-100 hover:scale-100 cursor-default'}
+            styles={'active:scale-100 hover:scale-100 cursor-default max-w-sm md:max-w-xs'}
           />
         </div>
         <div className='px-4'>

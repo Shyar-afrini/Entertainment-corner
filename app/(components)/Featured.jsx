@@ -1,5 +1,5 @@
-
 "use client"
+
 
 import React, { useEffect, useState } from 'react';
 import Tags from './Tags';
@@ -11,6 +11,7 @@ const Featured = () => {
   const [data, setData] = useState([]);
   const [backdrop, setBackdrop] = useState('');
   const [title, setTitle] = useState('');
+  const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 20))
 
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
@@ -30,15 +31,13 @@ const Featured = () => {
     handleRequest();
   }, [apiKey]);
 
-  let randomNumber = Math.floor(Math.random() * 20);
-
   useEffect(() => {
     if (data.length > 0) {
       const backdrop_path = `https://image.tmdb.org/t/p/original/${data[randomNumber]?.backdrop_path}`;
       setBackdrop(backdrop_path);
       setTitle(data[randomNumber]?.title);
     }
-  }, [data, randomNumber]);
+  }, [data]);
 
   const vote_average = data[randomNumber]?.vote_average;
   const id = data[randomNumber]?.id;

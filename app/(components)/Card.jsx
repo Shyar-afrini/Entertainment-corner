@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Card = ({ image, title, rating, styles, display, rotation}) => {
   return (
-    <div className={`text-white font-normal max-w-sm md:max-w-xs rounded overflow-hidden shadow-lg cursor-default transform transition-transform ${styles}`}>
+    <div className={`text-white font-normal ${styles} rounded overflow-hidden shadow-lg cursor-default transform transition-transform `}>
       <img className={`w-full ${rotation}`} src={image} alt={title} />
       <div className='py-4'>
         <div className='text-base mb-2'>{title}</div>

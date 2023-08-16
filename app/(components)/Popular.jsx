@@ -59,7 +59,7 @@ const Popular = () => {
               image={url}
               title={results[index]?.title}
               rating={results[index]?.vote_average}
-              styles={'hover:scale-105 cursor-pointer'}
+              styles={'hover:scale-105 cursor-pointer max-w-sm md:max-w-xs'}
             />
           </Link>
         ))}
