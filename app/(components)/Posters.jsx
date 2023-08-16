@@ -40,7 +40,7 @@ const Posters = () => {
                 See all
               </Link>
             </div>
-            <div className='w-full h-48 flex flex-col md:flex-row my-12 mb-24'>
+            <div className='w-full h-full flex flex-col md:flex-row my-0 mb-12 xs:my-12'>
                     <PosterCarousel image={carouselsData?.[0]} />
                     <PosterCarousel image={carouselsData?.[1]} />
                     <PosterCarousel image={carouselsData?.[2]} />
