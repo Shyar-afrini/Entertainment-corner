@@ -7,6 +7,8 @@ import Button from '../(components)/Button';
 import Image from 'next/image';
 import star from '../../public/Star.png';
 import Card from '../(components)/Card';
+import SimilarSeries from '../(components)/SimilarSeries'
+import Cast from '../(components)/Cast';
 
 const Details = ({ series_id }) => {
   const [data, setData] = useState({});
@@ -89,6 +91,8 @@ const Details = ({ series_id }) => {
           </div>
         </div>
       </div>
+      <Cast type={'tv'}/>
+      <SimilarSeries />
     </>
   );
 };

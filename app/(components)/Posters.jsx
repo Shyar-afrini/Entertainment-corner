@@ -1,10 +1,12 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import PosterCarousel from './PosterCarousel';
 import Link from 'next/link';
 
+
 const Posters = () => {
+
     const [carouselsData, setCarouselsData] = useState([]);
 
     const ids = [457332, 569094, 872585];
@@ -30,22 +32,22 @@ const Posters = () => {
     }, []);
 
     return (
-        <div className='w-screen px-8 sm:px-14 md:px-28 lg:px-44'>
-            <div className='flex justify-between mt-44'>
-              <h1 className='font-semibold text-xl text-white pb-6'>Movie Posters 🎬📸</h1>
-              <Link
-                href='/movies'
-                className='text-[#D0D0D0] font-light text-md underline underline-offset-2 cursor-pointer'
-              >
-                See all
-              </Link>
+            <div className='w-screen px-8 sm:px-14 md:px-28 lg:px-44'>
+                <div className='flex justify-between mt-44'>
+                  <h1 className='font-semibold text-xl text-white pb-6'>Movie Posters 🎬📸</h1>
+                  <Link
+                    href='/posters'
+                    className='text-[#D0D0D0] font-light text-md underline underline-offset-2 cursor-pointer'
+                  >
+                    See all
+                  </Link>
+                </div>
+                <div className='w-full h-full flex flex-col md:flex-row my-0 mb-12 xs:my-12'>
+                        <PosterCarousel id={ids.at(0)} image={carouselsData?.[0]} />
+                        <PosterCarousel id={ids.at(1)} image={carouselsData?.[1]} />
+                        <PosterCarousel id={ids.at(2)} image={carouselsData?.[2]} />
+                </div>
             </div>
-            <div className='w-full h-full flex flex-col md:flex-row my-0 mb-12 xs:my-12'>
-                    <PosterCarousel image={carouselsData?.[0]} />
-                    <PosterCarousel image={carouselsData?.[1]} />
-                    <PosterCarousel image={carouselsData?.[2]} />
-            </div>
-        </div>
     );
 };
 
