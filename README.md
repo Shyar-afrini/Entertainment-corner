@@ -12,7 +12,7 @@ Entertainment Corner is a website that offers a variety of entertainment-related
 ## Visit the Website
 [Click here to visit the Entertainment Corner website](https://entertainment-corner.vercel.app/)
 
-## Screenshots (if available)
+## Screenshots
 ![Screenshot 1](public/Home_pic.jpg)
 ![Screenshot 2](public/Movie-Details.jpg)
 
