@@ -44,7 +44,7 @@ const Featured = () => {
 
 
   return (
-    <div className='h-[100dvh] w-screen z-0 overflow-hidden'>
+    <div className='h-[100vh] w-screen z-0 overflow-hidden'>
       <div className='bg-gradient-to-b from-transparent to-[#090909] w-full z-0 h-[100vh] absolute'></div>
 
       <img 

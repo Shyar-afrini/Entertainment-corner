@@ -1,6 +1,4 @@
-'use client'
-
-import React, { useEffect } from 'react';
+import React from 'react';
 import Details from './Details';
 
 const Page = ({searchParams}) => {

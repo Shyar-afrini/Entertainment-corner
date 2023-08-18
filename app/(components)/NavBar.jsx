@@ -41,7 +41,7 @@ const NavBar = () => {
             <div className='flex md:hidden z-10'>
                 <Hamburger toggled={open} toggle={setOpen} size={24} />
             </div>
-            <ul id='list' className={`bg-[#0e0e0e] backdrop-blur-sm md:hidden flex flex-col justify-between items-center w-screen absolute left-0 top-0 z-0 ${ open? 'h-screen pt-40' : 'h-0 opacity-0 pt-20'} transition-all ease-in-out delay-100 duration-300 ` }>
+            <ul id='list' className={`bg-[#0e0e0e] backdrop-blur-sm md:hidden flex flex-col justify-between items-center w-screen absolute left-0 top-0 z-0 ${ open? 'h-[100dvh] pt-40' : 'h-0 opacity-0 pt-20'} transition-all ease-in-out delay-100 duration-300 ` }>
                 <li onClick={handleNav} className=' cursor-pointer'>
                     Search
                 </li>
