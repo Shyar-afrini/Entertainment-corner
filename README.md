@@ -1,4 +1,6 @@
-# Website Name: Entertainment Corner
+# Website Name: Entertainment Corner (under construction)
+
+### started 10/8/2023
 
 ## Description
 Entertainment Corner is a website that offers a variety of entertainment-related content, including articles, reviews, and recommendations on movies, TV shows, books, games, and more.
