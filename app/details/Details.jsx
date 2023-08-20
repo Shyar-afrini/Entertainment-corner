@@ -88,7 +88,7 @@ const Details = ({ movie_id }) => {
         </div>
       </div>
       <Cast type={'movie'} />
-      <Similar />
+      <Similar type={'movie'} title={"Movies"} />
     </>
   );
 };

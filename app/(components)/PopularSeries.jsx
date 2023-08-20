@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import Link from 'next/link';
+import Glider from 'react-glider';
+import 'glider-js/glider.min.css';
 
 const Popular = () => {
   const [results, setResults] = useState([]);
@@ -45,7 +47,7 @@ const Popular = () => {
         </Link>
       </div>
       
-      <div className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-y-16 gap-1 sm:gap-2 md:gap-4'>
+      <div className='sm:grid hidden sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-y-16 gap-1 sm:gap-2 md:gap-4'>
         {posterUrls.slice(0, 12).map((url, index) => (
           <Link
             key={results[index]?.id}
@@ -66,6 +68,33 @@ const Popular = () => {
           </Link>
         ))}
       </div>
+      <Glider
+      draggable
+      hasDots
+      slidesToShow={4}
+      slidesToScroll={1}
+      className=' overflow-x-scroll sm:hidden'
+      >
+      {posterUrls.slice(0, 12).map((url, index) => (
+          <Link
+            key={results[index]?.id}
+            href={{
+              pathname: '/series',
+              query: {
+                id: `${results[index]?.id}`
+              }
+            }}
+          >
+            <Card 
+              key={index} 
+              image={url} 
+              title={results[index]?.name} 
+              rating={results[index]?.vote_average} 
+              styles={'hover:scale-105 cursor-pointer max-w-sm md:max-w-xs pr-4'}
+            />
+          </Link>
+        ))}
+      </Glider>
     </div>
   );
 };

@@ -17,7 +17,7 @@ const PosterCarousel = ({ image, id }) => {
     }, [data, image])
 
   return (
-        <div className='group h-40 md:h-96 flex items-center justify-center w-full opacity-80 hover:opacity-100 transition-opacity cursor-pointer relative my-24 md:my-12'>
+        <div className='group h-52 md:h-96 flex items-center justify-center w-full opacity-80 hover:opacity-100 transition-opacity cursor-pointer relative my-12 ti:my-16 xs:my-32 sm:my-24 md:my-12'>
             <Link
                 href={{
                     pathname: '/posters',

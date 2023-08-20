@@ -7,7 +7,7 @@ import Button from '../(components)/Button';
 import Image from 'next/image';
 import star from '../../public/Star.png';
 import Card from '../(components)/Card';
-import SimilarSeries from '../(components)/SimilarSeries'
+import Similar from '../(components)/Similar';
 import Cast from '../(components)/Cast';
 
 const Details = ({ series_id }) => {
@@ -92,7 +92,7 @@ const Details = ({ series_id }) => {
         </div>
       </div>
       <Cast type={'tv'}/>
-      <SimilarSeries />
+      <Similar type={'tv'} title={'Tv shows'} />
     </>
   );
 };
